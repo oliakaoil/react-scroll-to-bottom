@@ -6,7 +6,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "browser": "node packages/test-harness/src/host/dev/index.js http://localhost:5000/__tests__/",
-    "build": "lerna run build --stream",
+    "build": "lerna run build --stream --ignore=playground",
     "docker": "concurrently \"npm run docker:up\" \"npm run docker:watch\"",
     "docker:down": "docker-compose down --rmi all",
     "docker:up": "docker-compose down && docker-compose build --parallel && docker-compose up --scale chromium=2",
